@@ -19,8 +19,10 @@ repositories {
 }
 
 dependencies {
+	implementation("org.webjars:jquery:3.4.1")
+	implementation("org.webjars:bootstrap:4.3.1")
+	implementation("org.webjars:webjars-locator-core")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
-	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
