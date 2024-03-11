@@ -1,0 +1,32 @@
+logging:
+    level:
+        org:
+            springframework:
+                security: TRACE
+
+#oauth2 configuration
+spring:
+    security:
+        oauth2:
+            client:
+                registration:
+                    github:
+                        client-id: ${GITHUB_CLIENT_ID}
+                        client-secret: ${GITHUB_CLIENT_SECRET}
+                    google:
+                        client-id: ${GOOGLE_CLIENT_ID}
+                        client-secret: ${GOOGLE_CLIENT_SECRET}
+
+#database connection
+astra:
+    api:
+        application-token: ${ASTRA_APPLICATION_TOKEN}
+        database-id: ${ASTRA_DATABASE_ID}
+        database-region: europe-west1
+    cql:
+        enabled: true
+        download-scb:
+            enabled: true
+        driver-config:
+            basic:
+                session-keyspace: main

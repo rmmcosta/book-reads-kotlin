@@ -19,12 +19,13 @@ repositories {
 }
 
 dependencies {
-	implementation("org.webjars:jquery:3.4.1")
-	implementation("org.webjars:bootstrap:4.3.1")
 	implementation("org.webjars:webjars-locator-core")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-data-cassandra")
+	implementation("com.datastax.astra:astra-spring-boot-3x-starter:0.6.2")
+	implementation("com.datastax.oss:java-driver-core:4.16.0")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
