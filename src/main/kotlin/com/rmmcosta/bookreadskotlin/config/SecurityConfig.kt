@@ -19,7 +19,7 @@ class SecurityConfig {
         return http
             .authorizeHttpRequests { auth ->
                 auth
-                    .requestMatchers("/", "/images/**", "/scripts/**", "/styles/**").permitAll()
+                    .requestMatchers("/", "/books/**", "/images/**", "/scripts/**", "/styles/**").permitAll()
                     .anyRequest().authenticated()
             }
             .formLogin(withDefaults())
