@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="EN">
 <head>
     <meta charset="UTF-8">
     <title>Book Reads</title>
@@ -8,8 +8,8 @@
 </head>
 <body>
 <div class="alert alert-danger" role="alert">
-    <h4 class="alert-heading">Book with id '<span th:text="${bookId}">ABC</span>' not found!</h4>
-    <p>Sorry, the book you are looking for is not available.</p>
+    <h4 class="alert-heading">No books match your search criteria</h4>
+    <p>Please <a href="../index.html">search</a> again</p>
     <hr>
     <p class="mb-0">Please try again with a different book.</p>
 </div>

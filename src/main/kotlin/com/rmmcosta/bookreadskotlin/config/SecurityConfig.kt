@@ -2,11 +2,10 @@ package com.rmmcosta.bookreadskotlin.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.security.config.Customizer.withDefaults
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
-import org.springframework.security.config.Customizer.withDefaults
 import org.springframework.security.web.SecurityFilterChain
-import java.beans.Customizer
 
 
 @Configuration
@@ -19,7 +18,8 @@ class SecurityConfig {
         return http
             .authorizeHttpRequests { auth ->
                 auth
-                    .requestMatchers("/", "/books/**", "/images/**", "/scripts/**", "/styles/**").permitAll()
+                    .requestMatchers("/", "/books/**", "/search/**", "/error/**", "/images/**", "/scripts/**", "/styles/**")
+                    .permitAll()
                     .anyRequest().authenticated()
             }
             .formLogin(withDefaults())
